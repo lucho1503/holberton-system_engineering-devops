@@ -1,2 +1,2 @@
 #!/bin/bash
-find . -empty -type -f print | wc -l | tail -2
+find -empty printf "%f\n"
