@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+# print "Holberton Scholl" 10 times ans if is equal to 9 print Hi
+i=0
+while [ $i -lt 10 ];
+do
+	echo "Holberton School"
+	if [ $i -eq 8 ];
+	then
+		echo "Hi"
+	fi
+	let i=i+1
+done
