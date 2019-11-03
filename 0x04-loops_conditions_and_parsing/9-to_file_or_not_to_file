@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+# file exists verify
+file=holbertonschool
+if [ -e $file ];
+then
+	echo "holbertonschol file exists"
+if [ -s $file ];
+then
+	echo "holbertonschool file is not empty"
+else
+	echo "holbertonschool file is empty"
+fi
+
+if [ -d $file ]
+then
+:
+else
+	echo "holbertonschool is a regular file"
+fi
+
+else
+	echo "holbertonschool file does not exits"
+fi
