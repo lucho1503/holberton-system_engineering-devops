@@ -1,8 +1,7 @@
 #!/usr/bin/env bash
 #this script redirect a page to other page permanently
-sudo apt-get update
-sudo apt-get -y install nginx
-echo "Holberton School" | sudo tee /var/www/html/index.nginx-debian.html
-red="server_name _;\n\t rewrite ^\/redirect_me http:\/\/owlisfun.tech\/ permanent;"
-sudo sed -i "s/server_name _;/$red/" /etc/nginx/sites-enabled/default
-sudo service nginx restart 
+apt-get update
+apt-get -y install nginx
+echo "Holberton School" > /var/www/html/index.nginx-debian.html
+sed -i "s/server_name _;/server_name _;\n\trewrite ^\/redirect_me https:\/\/www.youtube.com\/watch?v=EshjSGSg0q0&t=35s permanent;/" /etc/nginx/sites-available/default
+service nginx start 
