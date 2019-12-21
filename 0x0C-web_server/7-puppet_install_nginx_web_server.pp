@@ -1,5 +1,5 @@
 #install ngnix with puppet and configurate a server
-exce { 'config_server':
+exec { 'install':
   provider => shell,
-  command  => 'sudo apt-get update; sudo apt-get -y install nginx; echo "Holberton School" | sudo tee /var/www/html/index.nginx-debian.html; new="server_name _;\n\trewrite ^\/redirect_me https:\/\/www.youtube.com\/watch?v=x_WLgwoohSk&t=5s permanent ;"; sudo sed -i "s/server_name _;/$new/" /etc/nginx/sites-available/default; sudo nginx -t; sudo service nginx restart',
+  command  => 'sudo apt-get -y update ; sudo apt-get -y install nginx ; echo "Holberton School" | sudo tee /var/www/html/index.nginx-debian.html ; sudo sed -i "s/server_name _;/server_name _;\n\trewrite ^\/redirect_me https:\/\/www.youtube.com\/watch?v=EshjSGSg0q0&t=35s permanent;/" /etc/nginx/sites-available/default ; sudo service nginx start',
 }
