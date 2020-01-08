@@ -2,5 +2,5 @@
 #this script configures a new server with nginx conf file
 chmod 777 /etc/nginx/nginx.conf
 chown nginx:nginx /etc/nginx/nginx.conf
-sed -i "s/80/8080/g" /etc/nginx/nginx.conf
+sed -i "s/80/8080/g" /etc/nginx/sites-available/default
 su nginx -c "service nginx restart"
