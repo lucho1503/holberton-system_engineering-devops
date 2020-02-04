@@ -25,7 +25,7 @@ if __name__ == "__main__":
                 total_task.append(ta['title'])
                 completed_task += 1
 
-    print("Employee {} is done with task({}/{}):".
+    print("Employee {} is done with tasks({}/{}):".
           format(resp_json, num_task, completed_task))
     for ta in total_task:
         print("\t {}".format(ta))
