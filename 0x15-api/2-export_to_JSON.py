@@ -26,5 +26,5 @@ if __name__ == "__main__":
             task_row.append(task)
 
     user_task[sys.argv[1]] = task_row
-    with open(sys.argv[1]+'.json', "w") as f:
+    with open(sys.argv[1]+'.json', mode="w") as f:
         json.dump(user_task, f)
