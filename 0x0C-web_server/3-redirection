@@ -1,7 +1,0 @@
-#!/usr/bin/env bash
-#this script redirect a page to other page permanently
-apt-get update
-apt-get -y install nginx
-echo "Holberton School" > /var/www/html/index.nginx-debian.html
-sed -i "s/server_name _;/server_name _;\n\trewrite ^\/redirect_me https:\/\/www.youtube.com\/watch?v=EshjSGSg0q0&t=35s permanent;/" /etc/nginx/sites-available/default
-service nginx start 

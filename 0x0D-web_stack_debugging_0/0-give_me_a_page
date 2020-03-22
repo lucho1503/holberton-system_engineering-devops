@@ -1,3 +1,0 @@
-#!/usr/bin/env bash
-# install apache2
-sudo service apache2 start
