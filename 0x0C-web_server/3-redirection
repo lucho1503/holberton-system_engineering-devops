@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 # Script install Nginx server and redirects /redirect_me
-sudo echo "Holberton School" > /var/www/html/index.nginx-debian.html
+sudo apt-get update
+sudo apt-get -y install nginx
+echo "Holberton School" > /var/www/html/index.nginx-debian.html
 new_string="\\\trewrite ^/redirect_me https://www.youtube.com/ permanent;"
 sudo sed -i "42i $new_string" /etc/nginx/sites-available/default
 sudo service nginx restart
