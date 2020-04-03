@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# this script confiigures a new machine ubuntu with server nginx
+sudo apt-get -y update
+sudo apt-get -y install nginx
+host=$(cat /etc/hostname)
+sudo sed -i "36 i\ \tadd_header X-Served-By $host;\n" /etc/nginx/sites-enabled/default
+sudo service nginx restart
