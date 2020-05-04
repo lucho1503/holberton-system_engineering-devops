@@ -2,8 +2,8 @@
 """ this script return a information about a employee by id passed as argument
 """
 
-import sys
 import requests
+import sys
 
 if __name__ == "__main__":
 
