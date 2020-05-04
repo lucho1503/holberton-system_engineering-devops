@@ -29,4 +29,4 @@ if __name__ == "__main__":
           format(res_json, task_com, num_task))
 
     for task in total_task:
-        print("\t{}".format(task))
+        print("\t {}".format(task))
