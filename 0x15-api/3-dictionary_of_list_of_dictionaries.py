@@ -26,5 +26,5 @@ if __name__ == "__main__":
             task_list.append(row)
 
         usr_task[u.get('id')] = task_list
-    with open('todo_all_employees.json', mode='w') as f:
+    with open('todo_all_employees.json', 'w') as f:
         json.dump(usr_task, f)
