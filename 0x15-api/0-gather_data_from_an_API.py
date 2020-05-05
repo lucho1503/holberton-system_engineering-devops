@@ -1,16 +1,16 @@
 #!/usr/bin/python3
-# this script return a information about a employee by id passed as argument
+""" this script return a information about a employee by id passed as argument
+"""
 
-import sys
 import requests
+import sys
 
 if __name__ == "__main__":
-    # get the name by user id passed as argument
+
     url = 'https://jsonplaceholder.typicode.com/users/{}'.format(sys.argv[1])
     res = requests.get(url)
     res_json = res.json()['name']
 
-    # get todos url
     url_todos = requests.get('https://jsonplaceholder.typicode.com/todos')
     todos_json = url_todos.json()
     total_task = []
@@ -25,7 +25,7 @@ if __name__ == "__main__":
                 total_task.append(task['title'])
                 task_com += 1
 
-    print("Employee {} is done with task({}/{}:".
+    print("Employee {} is done with tasks({}/{}):".
           format(res_json, task_com, num_task))
 
     for task in total_task:
