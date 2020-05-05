@@ -22,7 +22,7 @@ if __name__ == "__main__":
                 task_com = task.get('completed')
                 task_title = task.get('title')
 
-            row = {"username": user, "task": task_title, "completed": task_com}
+            row = {"task": task_title, "username": user, "completed": task_com}
             task_list.append(row)
 
         usr_task[u.get('id')] = task_list
