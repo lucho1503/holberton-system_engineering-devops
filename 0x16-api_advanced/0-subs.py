@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-# return a number of subscribers of a subreddit gven
+""" return a number of subscribers of a subreddit given """
 
 
 import requests
