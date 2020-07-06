@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #this script fix a container so that nginx running as the nginx user
 chmod 777 /etc/nginx/nginx.conf
-chown nginx:nginx /etc/nginc/sites/available/default
+chown nginx:nginx /etc/nginx/sites-available/default
 pkill -9 apache
 su nginx -c "service nginx restart"
